@@ -2,8 +2,8 @@ const INC = 'counter/INC'
 const DEC = 'counter/DEC'
 
 //action creators declarations
-const inc = () => ({type: INC})
-const dec = () => ({type: DEC})
+export const inc = () => ({type: INC})
+export const dec = () => ({type: DEC})
 
 //initial state - stte that is present before any action
 const initialState = 0
