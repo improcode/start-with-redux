@@ -22,3 +22,5 @@ window.dec = (number) => store.dispatch(dec(number))
 
 window.addTask = (taskText) => store.dispatch(add(taskText))
 // window.addTask = (taskText) => store.dispatch(add(taskText))
+
+store.dispatch(add('Wstań jak budzik zadzwoni'))
