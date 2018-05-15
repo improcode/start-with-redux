@@ -1,9 +1,10 @@
 import {createStore, combineReducers} from 'redux'
 import counter, {inc, dec} from './state/counter'
 import todos, {add, del} from './state/todos'
-
+import counter2, {inc as incCounter2, dec as decCounter2} from './state/counter2'
 
 const reducer = combineReducers({
+    counter2,
     counter,
     todos
 
@@ -14,6 +15,7 @@ export const store = createStore(
 
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
+
 
 window.inc = (number) => store.dispatch(inc(number))
 window.dec = (number) => store.dispatch(dec(number))
