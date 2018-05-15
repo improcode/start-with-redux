@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-import {del} from '../state/todos'
+import {add, del} from '../state/todos'
 
 const box = {
     display: 'flex',
@@ -13,9 +13,9 @@ const box = {
 const ToDo = (props) => (
     <div style={box}>
         {
-            props.tasks.map(task => (
+            props.tasks.map((task, i) => (
                 <li
-                    onClick={props.deleteTask}
+                    onClick={() => props.deleteTask(i)}
                 >{task.text}</li>
             ))
         }
@@ -27,7 +27,7 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    deleteTask: () => dispatch(del())
+    deleteTask: (index) => dispatch(del(index))
 })
 
 export default connect(
