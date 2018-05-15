@@ -1,12 +1,14 @@
 import {createStore, combineReducers} from 'redux'
 import counter, {inc, dec} from './state/counter'
 import todos, {add, del} from './state/todos'
+import textlive, {write} from './state/textlive'
 import counter2, {inc as incCounter2, dec as decCounter2} from './state/counter2'
 
 const reducer = combineReducers({
     counter2,
     counter,
-    todos
+    todos,
+    textlive
 
 })
 

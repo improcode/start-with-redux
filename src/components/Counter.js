@@ -8,8 +8,13 @@ import Chip from 'material-ui/Chip';
 
 
 const box = {
-    background: 'yellow',
+    display: 'flex',
+    justifyContent: 'center',
+    margin: 'auto',
+    background: '#f1f1f1',
     marginTop: '15px',
+    width: '600px',
+    padding: '15px'
 }
 
 const Counter = (props) => (
