@@ -3,6 +3,8 @@ import {store} from './store'
 import Counter from "./components/Counter";
 import ToDO from './components/ToDO'
 import TextLive from './components/TextLive'
+import UserList from './components/UserList'
+import AsyncReduxCounter from './components/AsyncReduxCounter'
 
 class App extends Component {
     render() {
@@ -11,6 +13,10 @@ class App extends Component {
                 <Counter/>
                 <ToDO/>
                 <TextLive/>
+                <hr/>
+                <UserList/>
+                <hr/>
+                <AsyncReduxCounter/>
             </div>
         );
     }

@@ -11,7 +11,7 @@ const TextLive = (props) => (
 
     <div>
 
-        <h2>cokolwiek</h2>
+        <h2>...</h2>
 
         <TextField
             name={'writing'}
