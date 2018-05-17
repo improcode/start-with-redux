@@ -6,8 +6,10 @@ import textlive, {write} from './state/textlive'
 import counter2, {inc as incCounter2, dec as decCounter2} from './state/counter2'
 import randomUsers, {setUsersList, fetchUsers} from './state/randomUsers'
 import asyncReduxCounter, {initCounterSync} from './state/asyncReduxCounter'
+import auth, {initAuthUserSync} from "./state/auth";
 
 const reducer = combineReducers({
+    auth,
     asyncReduxCounter,
     counter2,
     counter,
@@ -24,4 +26,5 @@ export const store = createStore(
     composeEnhancer(applyMiddleware(thunk))
 )
 
+store.dispatch(initAuthUserSync())
 store.dispatch(initCounterSync())
