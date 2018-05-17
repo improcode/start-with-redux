@@ -32,6 +32,10 @@ export const loginByGoogle = () => (dispatch, getState) => {
     auth.signInWithPopup(googleProvider)
 }
 
+export const logOut = () => (dispatch, getState) => {
+    auth.signOut()
+}
+
 const initialState = {
     isUserLoggedIn: false,
     user: null

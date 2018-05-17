@@ -7,8 +7,10 @@ import counter2, {inc as incCounter2, dec as decCounter2} from './state/counter2
 import randomUsers, {setUsersList, fetchUsers} from './state/randomUsers'
 import asyncReduxCounter, {initCounterSync} from './state/asyncReduxCounter'
 import auth, {initAuthUserSync} from "./state/auth";
+import sidebar from './state/sidebar'
 
 const reducer = combineReducers({
+    sidebar,
     auth,
     asyncReduxCounter,
     counter2,
